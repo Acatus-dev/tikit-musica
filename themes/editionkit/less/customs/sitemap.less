@@ -1,0 +1,25 @@
+/* @section Sitemap */
+#sitemap-list {
+	max-width: 450px;
+	list-style-type: square;
+	a{
+		display: block;
+		width: 100%;
+		padding: 5px 0;
+		text-decoration: none;
+		&:hover,
+		&:active,
+		&:focus{
+			text-decoration: underline;
+		}
+	}
+	> li{
+		margin-bottom: 15px;
+	}
+	ul{
+		ul{
+			list-style-type: circle;
+		}
+	}
+}
+

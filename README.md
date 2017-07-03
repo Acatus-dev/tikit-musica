@@ -1,1 +1,1 @@
-# tikit
+INIT PROJECT

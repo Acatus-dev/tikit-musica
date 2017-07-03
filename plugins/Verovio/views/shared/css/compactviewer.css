@@ -1,0 +1,67 @@
+.main-area {
+    overflow-y: hidden;
+    position: relative;
+}
+
+.canvas-container {
+    margin: 0px;
+    padding: 0px;
+    overflow-y: hidden;
+} 
+
+.clef-canvas-div {
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.clef-canvas {
+    width: 200px;
+    height: 500px;
+}
+
+.main-canvas-div {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.main-canvas {
+    width: 1000px;
+    height: 500px;
+}
+
+.critrep-div {
+    height: 150px;
+    overflow-y: auto;
+    font-size: 1em;
+    margin: 2px;
+    text-align: left;
+}
+
+.critrep {
+    font-size: 0.85em;
+    width: 100%;
+}
+
+.critrep td {
+    padding: 0.3em;
+}
+
+.critrep-div.critrep-off {
+    height: 1.1em;
+}
+
+.meiview-main {
+    margin: 10px 20px;
+    padding: 10px 0px 10px 10px;
+}
+
+.voicename-div {
+    opacity: 0.7;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: left;
+    margin-top: 10px;
+}
+

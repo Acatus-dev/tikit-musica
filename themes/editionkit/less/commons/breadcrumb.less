@@ -1,0 +1,37 @@
+/* @section Breadcrumb */
+#content .breadcrumb {
+	font-family: @titleFont;
+	font-size: 1.3em;
+	.title();
+	padding: 0 30px;
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		li {
+			display: inline-block;
+			& + li {
+				margin-left: 2px;
+				&:before {
+					content: ">"
+				}
+			}
+			&:last-child{
+				padding: 15px 0;
+			}
+
+			a {
+				color: @headTextColor;
+				display: inline-block;
+				padding: 15px 0;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)) {
+	#content .breadcrumb {
+		padding: 0 30px;
+	}
+}

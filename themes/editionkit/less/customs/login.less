@@ -1,0 +1,99 @@
+/* @section Login */
+.login, .register{
+	#content{
+		h1{
+			.title();
+			font-size: 1.5em;
+			font-weight: normal;
+			line-height: 1.5em;
+		}
+		#login-links,
+		form,
+		p{
+			background: @contentBgColor;
+			margin: 0;
+			padding: 15px;
+		}
+		form{
+			border-bottom: thin @borderColor solid;
+			.field{
+				margin-bottom: 15px;
+			}
+			.inputs{
+				padding: 0;
+				margin-left: 0;
+			}
+			input[type="submit"]{
+				background: @navBgColor;
+				border: @borderTitleColor;
+				color: @headTextColor;
+				text-transform: none;
+				&:hover,
+				&:focus, 
+				&:active{
+					background: @darkNavBgColor;
+					text-decoration: underline;
+				}
+			}
+			.explanation{
+				font-size: 0.8em;
+				padding: 0 0 5px;
+			}
+			.columns{
+				width: 100%;
+			}
+		}
+	}
+} 
+
+@media only screen and (min-width: unit(@tabletWidth, px)){
+	.login, .register{
+		#content{
+			form{
+				padding: 15px 30px;
+				border: thin @borderColor solid;
+				border-top: 0 none;
+				.field{
+					
+					max-width: 450px;
+				}
+			}
+			#login-links,
+			.clear{
+				border-left: thin @borderColor solid;
+				border-right: thin @borderColor solid;
+			}
+		}
+	}
+}
+/* @section Register */
+.register #primary{
+	.reset-primary();
+	#capabilities{
+		background: @contentBgColor;
+		p{
+			margin: 0;
+		}
+	}
+	form{
+		border-bottom: 0 none;
+	}
+	#confirm{
+		border-bottom: thin @borderColor solid;
+	}
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)){
+	.register #primary{
+		form,
+		#capabilities p{
+			border-left: thin @borderColor solid;
+			border-right: thin @borderColor solid;
+		}
+		#confirm{
+			border: thin @borderColor solid;
+			border-top: 0 none;
+		}
+	}
+}
+

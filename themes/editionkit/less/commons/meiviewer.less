@@ -1,0 +1,83 @@
+#content #meiviewer {
+	clear:both;
+	width:100%;
+	font-size: 0.8em;
+	background-color: @contentBgColor;
+	svg {
+		overflow: auto;
+	}
+	.buttons {
+		padding-bottom: 5px;
+		text-align:center;
+	}
+
+	button, input {
+		color: @headTextColor;
+		display: inline-block;
+		margin: 0px 1px 1px 0px;
+		vertical-align: bottom;
+		padding : 5px 10px;
+		height: 35px;
+		max-width: 80px;
+	}
+	button {
+		background-color: @titleBgColor;
+	}
+	input {
+		background-color: @darkNavBgColor;
+		padding: 0 auto;
+		text-align:center;
+	}
+	input:disabled {
+		color: @borderColor;
+	}
+	#output {
+		clear: both;
+		border: 1px solid @borderColor;
+	}
+	p {
+		font-family: @titleFont;
+		font-size: 1.3em;
+		line-height: normal;
+		margin: 0;
+	}
+	&.fullscreen {
+		position:fixed;
+		top:0;
+		left:0;
+		height: 100vh;
+		z-index:100;
+		#output {
+			max-height: 75vh; 
+			overflow-x: auto;
+		}
+	}
+	.fullscreen-btn {
+		display:none;
+	}
+	.not-mobile {
+		display:none;
+	}
+}
+
+
+@media only screen and (min-width: unit(@tabletWidth, px)) {
+	#content #meiviewer {
+		.fullscreen-btn {
+			visibility:visible;
+		}
+		.buttons {
+			text-align : left;
+			float: none;
+			padding: 0px 20px 20px 0px;
+			display: table-cell;
+	     	vertical-align: bottom;
+		}
+		.mobile {
+			display:none;
+		}
+		.not-mobile {
+			display:inherit;
+		}
+	}
+}

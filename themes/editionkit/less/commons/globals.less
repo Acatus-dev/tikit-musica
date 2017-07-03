@@ -1,0 +1,76 @@
+/* @section Globals */
+
+/* @subsection Elements */
+* {
+	box-sizing: border-box;
+	outline: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: @bgColor;
+	font-family: @textFont;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal;
+	position: relative;
+	padding-bottom: 70px;
+	height: auto;
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: @textColor;
+	&:hover , &:active , &:focus {
+		text-decoration: underline;
+		color: @textColor;
+		outline: 0;
+	}
+
+	&:visited {
+		color: @textColor;
+	}
+}
+
+#primary a {
+	text-decoration: underline;
+}
+
+nav , #simple-pages-breadcrumbs {
+	font-family: @titleFont;
+	font-size:1.4em;
+}
+
+.text-link {
+	text-decoration: underline;
+}
+
+header , nav.top , #content {
+	padding: 0;
+	.site-width ();
+}
+
+#home #content > div {
+	width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: @titleFont;
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)) {
+	body {
+		background-color: #FFFFFF;
+		background: url('../images/background.jpg') fixed no-repeat center center;
+		background-size: cover;
+	}
+
+	#content {
+		margin-top: 30px;
+	}
+}
+

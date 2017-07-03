@@ -1,0 +1,33 @@
+.site-width () {
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	@media only screen and (min-width: unit(@tabletWidth, px)) {
+		width: 95%;
+	}
+}
+
+.title () {
+	border-top: thin @borderTitleColor solid;
+	border-bottom: thin @borderTitleColor solid;
+	background: @titleBgColor;
+	color: @headTextColor;
+	padding: 15px;
+	margin: 0;
+	a{
+		color: @headTextColor;
+	}
+	@media only screen and (min-width: unit(@tabletWidth, px)) {
+		border: thin @borderTitleColor solid;
+		padding: 10px 30px;
+	}
+	
+}
+
+.reset-primary(){
+	border: 0 none;
+	background: none;
+	padding: 0;
+	box-shadow: none;
+}

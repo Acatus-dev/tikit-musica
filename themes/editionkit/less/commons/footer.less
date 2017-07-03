@@ -1,0 +1,46 @@
+/* @section Footer */
+footer{
+	position:absolute;
+	bottom:0;
+	left:0;
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+	background: @borderTitleColor;
+	width: 100%;
+	color: @headTextColor;
+	a {
+		color: @headTextColor !important;
+		&:hover,
+		&:active,
+		&:focus{
+			color: @headTextColor;
+		}
+	}
+	nav {
+		.site-width();
+	}
+	ul {
+		float:left;
+		li{
+			display: inline-block;
+			a{
+				padding: 10px 7px;
+			}
+			&+ li:before{
+				content: "|";
+			}
+		}
+	}
+	.foot-left {
+		padding : 5px;
+		float: right;
+		font-size:0.7em;
+		text-align:right;
+	}
+	:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

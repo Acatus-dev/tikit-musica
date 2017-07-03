@@ -1,0 +1,152 @@
+/* CSS pour les cartouches (shortcode [blog_simplepage] ) */
+
+#content section.cartridge {
+    border: 0 none;
+    box-shadow: none;
+    background: @contentBgColor;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    img {
+        max-width: 100%;
+        border: 0 none;
+    }
+    .cartridge-title {
+        .title();
+        margin: 0;
+        padding: 0 10px;
+        font-family: @titleFont;
+        font-weight: normal;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+    .cartridge-content {
+        padding: 20px 15px;
+        font-size: 0.9em;
+        border-bottom: thin @borderColor solid;
+        position: relative;
+        height: 230px;
+        overflow:hidden;
+        div {
+            margin: 0;
+            p {
+                margin: 0 0 5px;
+            }
+        }
+        .read-more {
+            display: block;
+            margin-top: 5px;
+            text-align: right;
+            font-size: 1.1em;
+            text-decoration: underline;
+        }
+        &.with-bg {
+            padding: 0;
+            padding-top: 150px;
+            background: url('/files/theme/the-project.jpg') top center no-repeat;   
+            background-size: cover;
+            div {
+                width: 100%;
+                background: rgba(74, 74, 74, 0.8);
+                color: @headTextColor;
+                padding: 20px 15px;
+                .read-more {
+                    color: @headTextColor;
+               }
+            }
+        }
+    }
+}
+
+#content section.partners {
+    .cartridge-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            max-width: 14%;
+            vertical-align: middle;
+            margin-left: 1%;
+            a {
+                img {
+                    max-width: 100%;
+                }
+            }
+            &.dariah {
+                max-width: 20%;
+            }
+            &.ministere {
+                max-width: 10%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)) {
+    #content section.cartridge {
+        width: 48%;
+        .cartridge-title {
+            border: thin @borderTitleColor solid;
+            padding: 0 10px;
+        }
+        .cartridge-content {
+            border-left: thin @borderColor solid;
+            border-right: thin @borderColor solid;
+            min-height: 0;
+            /* height: 350px; */
+            div {
+                .read-more {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-bottom: 20px;
+                }
+            }
+            &.with-bg {
+                div {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    .read-more {
+                        position: static;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        &.left {
+            clear:left;
+            float: left;
+            margin-right: 1%;
+        }
+        &.right {
+            clear: right;
+            float: right;
+            margin-left: 1%;
+        }
+        &.large {
+            clear:both;
+            width:100%;
+        }
+    }
+    #content section.partners {
+        .cartridge-content {
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: unit(@desktopWidth, px)) {
+    #content section.partners {
+        .cartridge-content {
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+/* @section Pages */
+
+.page #primary {
+    background: @contentBgColor;
+    border: 0 none;
+    border-bottom: thin @borderColor solid;
+    box-shadow: none;
+    padding: 25px 20px;
+    h1 {
+        font-family: @titleFont;
+        font-size: 2.2em;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+    .content {
+        img {
+            display: block;
+            margin: 0 auto;
+            height: auto !important;
+            width: 100% !important;
+            max-width: 300px;
+        }
+    }
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)) {
+    .page #primary {
+        border: thin @borderColor solid;
+        border-top: 0 none;
+        padding: 15px;
+        padding: 30px 50px 25px;
+        .content {
+            img {
+                float: right;
+                margin: 0 0 30px 30px;
+            }
+        }
+    }
+}

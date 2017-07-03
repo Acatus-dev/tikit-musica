@@ -1,0 +1,62 @@
+/* @section Contact us */
+#contact #primary{
+	padding: 0;
+	border: 0 none;
+	background: none;
+	box-shadow: none;
+}
+
+#contact{
+	h1{
+		.title();
+		font-size: 1.5em;
+		font-weight: normal;
+		line-height: 1.5em;
+	}
+	.contact-content{
+		background: @contentBgColor;
+		border-bottom: thin @borderColor solid;
+		padding: 15px;
+		form{
+			margin-top: 15px;
+		}
+		input,
+		textarea{
+			border: thin @borderColor solid;
+		}
+		.field{
+			margin-bottom: 15px;
+		}
+		.inputs{
+			padding-top: 0;
+		}
+		
+		.submit{
+			text-align: right;
+			input{
+				background: @navBgColor;
+				border: @borderTitleColor;
+				color: @headTextColor;
+				text-transform: none;
+				&:hover,
+				&:focus, 
+				&:active{
+					background: @darkNavBgColor;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)){
+	#contact{
+		.contact-content{
+			border: thin @borderColor solid;
+			border-top: 0 none;
+			form{
+				max-width: 450px;
+			}
+		}
+	}
+}

@@ -1,0 +1,149 @@
+/* @section Collections */
+
+/* @subsection Show */
+.collections.show #content {
+	> h1{
+		.title();
+		margin-bottom: 20px;
+	}
+	> div{
+		border: 0 none;
+		background: @contentBgColor; 
+		box-shadow: none;
+		padding: 0;
+		h2{
+			.title();
+		}
+		> div{
+			margin: 0;
+			padding: 0 15px;
+			border-top: 0;
+			h3{
+				margin: 0;
+				padding: 15px 0 10px;
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+			&:last-child{
+				border-bottom: thin @borderColor solid;
+				padding-bottom: 15px;
+			}
+		}
+		#comment-main-container{
+			padding: 0;
+		}
+		.comments{
+			h2{
+				font-weight: normal;
+			}
+		}
+		#comment-form{
+			max-width: none;
+			width: 100%;
+			padding: 15px;
+			border-bottom: thin @borderColor solid;
+			label{
+				font-weight: normal;
+				width: 100%;
+			}
+			.commenting-explanation{
+				font-size: 0.8em;
+				margin: 0 0 5px;
+			}
+			div{
+				&:last-child{
+					text-align: right;
+				}
+			}
+			input[type="text"]{
+				border: thin @borderColor solid;
+				width: 100%;
+			}
+			#submit{
+				display: inline-block;
+				background: @navBgColor;
+				color: @headTextColor;
+				text-transform: none;
+				&:hover,
+				&:focus,
+				&:active{
+					text-decoration: underline;
+					background: @darkNavBgColor;
+					
+				}
+			}
+		}
+		
+	}
+}
+
+@media only screen and (min-width: unit(@tabletWidth, px)){
+	.collections.show #content {
+		> h1 {
+			margin-bottom: 20px;
+		}
+		> div{
+			> div{
+				padding: 0 30px;
+				border-left: thin @borderColor solid;
+				border-right: thin @borderColor solid;
+			}
+			#comment-form{
+				padding: 15px 30px;
+				border: thin @borderColor solid;
+				border-top: 0 none;
+				label{
+					font-weight: normal;
+					width: 40%;
+				}
+				input[type="text"]{
+					width: 58%;
+				}
+			}
+		}
+	}
+}
+
+/* @subsection Browse */
+.collections.browse #content {
+	> h1 {
+		.title();
+		margin-bottom: 20px;
+	}
+
+	#sort-links {
+		background: @contentBgColor;
+		border: thin @borderColor solid;
+		margin: 20px 0 10px;
+		box-shadow: none;
+	}
+	.collection{
+		padding: 0;
+		border: 0 none;
+		background: @contentBgColor;
+		box-shadow: none;
+		h2{
+			.title();
+		}
+		p{
+			margin: 0 !important;
+			padding: 15px !important;
+			border-bottom: thin @borderColor solid;
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: unit(@tabletWidth, px)){
+	.collections.browse #content {
+		.collection{
+			p{
+				padding: 15px 30px !important;
+				border: thin @borderColor solid;
+				border-top: 0 none;
+			}
+		}
+	}
+}
+
