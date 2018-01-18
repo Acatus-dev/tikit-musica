@@ -63,13 +63,15 @@ class LinkToItemPlugin extends Omeka_Plugin_AbstractPlugin
 
   public function filter_link_to_item($text, $args)
   {
-    $elementText = $args['element_text'];
-    if ($this->_actualElement != $elementText->element_id) {
-      $this->_actualElement = $elementText->element_id;
-      $this->_nbElement = 0;
-    }
-    else {
-      $this->_nbElement ++;
+    if (@!is_null($args['element_text']) && $args['element_text'] !== false) {    
+      $elementText = $args['element_text'];
+      if ($this->_actualElement != $elementText->element_id) {
+        $this->_actualElement = $elementText->element_id;
+        $this->_nbElement = 0;
+      }
+      else {
+        $this->_nbElement ++;
+      }
     }
 
     
